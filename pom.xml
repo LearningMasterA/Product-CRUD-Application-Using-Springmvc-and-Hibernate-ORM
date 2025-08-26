@@ -60,12 +60,22 @@
 
         
         
-        <!-- JSTL (Jakarta) -->
+        <!-- JSTL (Javax) -->
 			<dependency>
 				<groupId>javax.servlet.jsp.jstl</groupId>
 				<artifactId>javax.servlet.jsp.jstl-api</artifactId>
 				<version>1.2.2</version>
 			</dependency>
+			
+			
+			
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+			
+			
 			
 			
 			
