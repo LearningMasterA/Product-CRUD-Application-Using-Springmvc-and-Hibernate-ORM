@@ -13,7 +13,7 @@
            http://www.springframework.org/schema/tx/spring-tx.xsd
            http://www.springframework.org/schema/mvc 
            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-           <tx:annotation-driven />
+           <tx:annotation-driven transaction-manager="transactionManager"/>
            <context:component-scan base-package="productcrudapp"/>
            
 <bean
@@ -27,7 +27,7 @@
 
 <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
 
-	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+	<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
 	<property name="url" value="jdbc:mysql://localhost:3306/productcrud"/>
 	<property name="username" value="root"/>
 	<property name="password" value="Ankita@261203"/>
@@ -42,7 +42,7 @@
 <!-- Hibernate Properties -->
 	<property name="hibernateProperties">
 	<props>
-			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			<prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop>
 			<prop key="hibernate.show_sql">true</prop>
 			<prop key="hibernate.hbm2ddl.auto">update</prop>
 		</props>
